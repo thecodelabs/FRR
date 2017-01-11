@@ -1,11 +1,11 @@
-import { createStore, applyMiddleWare } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
 import { syncHistoryWithStore } from 'react-router-redux'
 import { browserHistory } from 'react-router'
 
 import createSagaMiddleware from 'redux-saga'
 import Saga from '../sagas/sagas'
 
-import rootReducer from './reducers/index'
+import rootReducer from '../reducers/index'
 
 import superagent from 'superagent'
 import feathers from 'feathers-client'
@@ -15,7 +15,7 @@ const defaultStore = {};
 
 const sagaMiddleware = createSagaMiddleware();
 
-const store = createStore(rootReducer, defaultStore, applyMiddleWare(sagaMiddleware));
+const store = createStore(rootReducer, defaultStore, applyMiddleware(sagaMiddleware));
 
 const host = 'http://localhost:3030';
 export const app = feathers()

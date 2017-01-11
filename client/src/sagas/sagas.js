@@ -1,7 +1,7 @@
-import { takeEvery } from 'redux-sagas'
-import { fork, call, put } from 'redux-sagas/effects'
+// import { takeEvery } from 'redux-sagas'
+import { takeEvery, fork, call, put } from 'redux-saga/effects'
 import { getRecentRecipes } from '../services/api'
-import { browserHistory } from 'react-router'
+// import { browserHistory } from 'react-router'
 
 
 function* fetchRecentRecipes(feathersApp) {

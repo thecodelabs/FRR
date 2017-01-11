@@ -7,10 +7,8 @@ class RecipeCard extends Component {
     return(
       <Card
         centered={true}
-        image={recipe.imageURL}
         header={recipe.name}
         meta="description"
-        description={recipe.description.substring(0, 100) + "..."}
       />
     )
   }

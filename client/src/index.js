@@ -6,7 +6,7 @@ import Home from './components/Home'
 
 import { Router, Route, IndexRoute } from 'react-router'
 import { Provider } from 'react-redux'
-import store from './stores/store'
+import store, { history } from './stores/store'
 
 const router = (
   <Provider store={store}>
