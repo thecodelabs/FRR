@@ -1,5 +1,6 @@
 import { createStore, applyMiddleWare } from 'redux'
 import { syncHistoryWithStore } from 'react-router-redux'
+import { browserHistory } from 'react-router'
 
 import createSagaMiddleware from 'redux-saga'
 import Saga from './sagas/sagas'
