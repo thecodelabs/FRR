@@ -14,7 +14,7 @@ const defaultStore = {};
 
 const sagaMiddleware = createSagaMiddleware();
 
-const store = createStore({rootReducer, defaultStore, applyMiddleWare(sagaMiddleware)});
+const store = createStore(rootReducer, defaultStore, applyMiddleWare(sagaMiddleware));
 
 const host = 'http://localhost:3030';
 export const app = feathers()
