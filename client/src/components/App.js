@@ -4,13 +4,13 @@ import * as actionCreators from '../actions/actionCreators'
 
 import Main from './Main'
 
-mapStateToProps(state)=> {
+function mapStateToProps(state) {
   return {
     recipes: state.recipes
   }
 }
 
-mapDispatchToProps(dispatch)=> {
+function mapDispatchToProps(dispatch) {
   return bindActionCreators(actionCreators, dispatch);
 }
 
